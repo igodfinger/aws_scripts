@@ -23,8 +23,7 @@ InstanceIds=[
 def lambda_handler(event, context):
     response = ec2.start_instances(
         DryRun=False,
-        InstanceIds=InstanceIds,
-        Force=False
+        InstanceIds=InstanceIds
     )
     logger.info(response)
     return InstanceIds
